@@ -1,0 +1,13 @@
+/* Style for the header */
+app-header {
+  background-color: #f8f9fa;
+}
+
+
+/* Style for the footer */
+app-footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}

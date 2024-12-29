@@ -1,0 +1,48 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/2834bc0a-e0ac-4baf-95da-f59606594e7a.vsidx
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/41540e95-3a61-453f-87fc-cb9b9f5c81f0.vsidx
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/e064f164-139f-4b41-9873-1fc927f5bcb0.vsidx
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/d248e1ed-1d6a-4058-9751-689a0f0e6696.vsidx
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/68a9454d-f3c4-4150-9a59-8c6d11239f02.vsidx
+/.vs/BespokeBike.SalesTraker.Web/FileContentIndex/f35b3403-1704-43aa-a0dc-5894126e5559.vsidx

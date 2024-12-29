@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "BespokeBike.SalesTraker.Web", "BespokeBike.SalesTraker.Web.esproj", "{77C30590-A9B1-4904-BBC4-D0CE335F73A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C30590-A9B1-4904-BBC4-D0CE335F73A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
