@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Product, ProductCreateDto, ProductUpdateDto } from '../Model/Product';
@@ -42,6 +42,17 @@ export class ProductService {
 
   deleteProduct(id: number): Observable<void> {
     return this.http.delete<ApiResponse<void>>(`${this.apiUrl}/${id}`).pipe(
+      map(response => response.data)
+    );
+  }
+
+
+  isProductNameUnique(productName: string, productId: number): Observable<boolean> {
+    const params = new HttpParams()
+      .set('productName', productName)
+      .set('productId', productId.toString());
+
+    return this.http.get<ApiResponse<boolean>>(`${this.apiUrl}/IsProductNameUnique`, { params }).pipe(
       map(response => response.data)
     );
   }

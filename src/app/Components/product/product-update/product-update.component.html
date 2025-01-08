@@ -3,9 +3,12 @@
   <form [formGroup]="productForm">
     <mat-form-field>
       <mat-label>Name</mat-label>
-      <input matInput formControlName="name">
+      <input matInput formControlName="name" (blur)="checkProductNameUnique()">
       <mat-error *ngIf="productForm.get('name')?.hasError('required')">
         Name is required
+      </mat-error>
+      <mat-error *ngIf="productForm.get('name')?.hasError('notUnique')">
+        Name is not unique
       </mat-error>
     </mat-form-field>
     <mat-form-field>
