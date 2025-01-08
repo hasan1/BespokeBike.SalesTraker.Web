@@ -1,1 +1,46 @@
-<p>product works!</p>
+<!-- filepath: /c:/Users/bsata/source/repos/BespokeBike.SalesTraker.Web/src/app/Components/product/product.component.html -->
+<div>
+  <button mat-raised-button color="primary" (click)="addProduct()">Add Product</button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="productId">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let product"> {{product.productId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="manufacturer">
+    <th mat-header-cell *matHeaderCellDef> Manufacturer </th>
+    <td mat-cell *matCellDef="let product"> {{product.manufacturer}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="style">
+    <th mat-header-cell *matHeaderCellDef> Style </th>
+    <td mat-cell *matCellDef="let product"> {{product.style}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantityOnHand">
+    <th mat-header-cell *matHeaderCellDef> Quantity On Hand </th>
+    <td mat-cell *matCellDef="let product"> {{product.quantityOnHand}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="isActive">
+    <th mat-header-cell *matHeaderCellDef> Active </th>
+    <td mat-cell *matCellDef="let product"> {{product.isActive ? 'Yes' : 'No'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let product">
+      <button mat-button (click)="editProduct(product)">Edit</button>
+      <button mat-button (click)="deleteProduct(product.productId)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

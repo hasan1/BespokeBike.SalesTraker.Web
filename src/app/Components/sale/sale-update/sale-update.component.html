@@ -1,0 +1,39 @@
+<!-- filepath: /c:/Users/bsata/source/repos/BespokeBike.SalesTraker.Web/src/app/Components/sale/sale-update/sale-update.component.html -->
+<h1 mat-dialog-title>{{data.sale.saleId ? 'Edit' : 'Add'}} Sale</h1>
+<div mat-dialog-content>
+  <form [formGroup]="saleForm">
+    <mat-form-field>
+      <mat-label>Employee ID</mat-label>
+      <input matInput formControlName="employeeId" type="number">
+      <mat-error *ngIf="saleForm.get('employeeId')?.hasError('required')">
+        Employee ID is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Customer ID</mat-label>
+      <input matInput formControlName="customerId" type="number">
+      <mat-error *ngIf="saleForm.get('customerId')?.hasError('required')">
+        Customer ID is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Sales Date</mat-label>
+      <input matInput formControlName="salesDate" type="date">
+      <mat-error *ngIf="saleForm.get('salesDate')?.hasError('required')">
+        Sales Date is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Total Amount</mat-label>
+      <input matInput formControlName="totalAmount" type="number">
+      <mat-error *ngIf="saleForm.get('totalAmount')?.hasError('required')">
+        Total Amount is required
+      </mat-error>
+    </mat-form-field>
+    <mat-checkbox formControlName="isActive">Active</mat-checkbox>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()" [disabled]="saleForm.invalid">Save</button>
+</div>

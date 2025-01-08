@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Shared/header/header.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { ProductComponent } from './Components/product/product.component';
-import { SalesComponent } from './Components/sales/sales.component';
 import { EmployeeComponent } from './Components/employee/employee.component';
 import { CustomerComponent } from './Components/customer/customer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -22,6 +21,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeeUpdateComponent } from './Components/employee/employee-update/employee-update.component';
+import { ProductUpdateComponent } from './Components/product/product-update/product-update.component';
+import { SaleComponent } from './Components/sale/sale.component';
+import { SaleUpdateComponent } from './Components/sale/sale-update/sale-update.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    SalesComponent,
     EmployeeComponent,
     CustomerComponent,
-    CustomerUpdateComponent
+    CustomerUpdateComponent,
+    EmployeeUpdateComponent,
+    ProductUpdateComponent,
+    SaleUpdateComponent,
+    SaleComponent
   ],
   imports: [
     BrowserModule,

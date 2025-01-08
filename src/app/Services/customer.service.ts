@@ -4,13 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Customer, CustomerCreateDto, CustomerUpdateDto } from '../Model/Customer';
 import { ApiResponse } from '../Model/ApiResponse';
+import { environment } from '../../emvironments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
-  private readonly apiUrl = 'https://localhost:7230/api/Customer';
+  private readonly apiUrl = `${environment.apiUrl}/Customer`;
 
   constructor(private http: HttpClient) {}
 

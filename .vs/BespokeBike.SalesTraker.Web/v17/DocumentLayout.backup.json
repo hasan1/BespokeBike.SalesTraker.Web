@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\bsata\\source\\repos\\BespokeBike.SalesTraker.Web\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77C30590-A9B1-4904-BBC4-D0CE335F73A6}|BespokeBike.SalesTraker.Web.esproj|c:\\users\\bsata\\source\\repos\\bespokebike.salestraker.web\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{77C30590-A9B1-4904-BBC4-D0CE335F73A6}|BespokeBike.SalesTraker.Web.esproj|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 1533,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,6 +91,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "C:\\Users\\bsata\\source\\repos\\BespokeBike.SalesTraker.Web\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
+              "ToolTip": "C:\\Users\\bsata\\source\\repos\\BespokeBike.SalesTraker.Web\\src\\app\\app.module.ts",
+              "RelativeToolTip": "src\\app\\app.module.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-12-29T15:36:01.068Z",
+              "EditorCaption": ""
             }
           ]
         },

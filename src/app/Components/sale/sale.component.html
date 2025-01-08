@@ -1,0 +1,46 @@
+<!-- filepath: /c:/Users/bsata/source/repos/BespokeBike.SalesTraker.Web/src/app/Components/sale/sale.component.html -->
+<div>
+  <button mat-raised-button color="primary" (click)="addSale()">Add Sale</button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="saleId">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.saleId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="employeeId">
+    <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.employeeId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="customerId">
+    <th mat-header-cell *matHeaderCellDef> Customer ID </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.customerId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="salesDate">
+    <th mat-header-cell *matHeaderCellDef> Sales Date </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.salesDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalAmount">
+    <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.totalAmount | currency}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="isActive">
+    <th mat-header-cell *matHeaderCellDef> Active </th>
+    <td mat-cell *matCellDef="let sale"> {{sale.isActive ? 'Yes' : 'No'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let sale">
+      <button mat-button (click)="editSale(sale)">Edit</button>
+      <button mat-button (click)="deleteSale(sale.saleId)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
