@@ -21,6 +21,7 @@ export class EmployeeUpdateComponent {
   ) {
 
     this.employeeForm = this.fb.group({
+      employeeId: [data.employee.employeeId],
       firstName: [data.employee.firstName, Validators.required],
       lastName: [data.employee.lastName, Validators.required],
       address: [data.employee.address, Validators.required],

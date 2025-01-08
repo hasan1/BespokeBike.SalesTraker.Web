@@ -2,6 +2,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -21,7 +22,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   productForm: FormGroup;
 
-  constructor(private productService: ProductService, public dialog: MatDialog, private fb: FormBuilder) {
+  constructor(private productService: ProductService, public dialog: MatDialog, private fb: FormBuilder, private _snackBar: MatSnackBar) {
     this.productForm = this.fb.group({
       name: ['', Validators.required],
       manufacturer: ['', Validators.required],
@@ -58,7 +59,10 @@ export class ProductComponent implements OnInit, OnDestroy {
           quantityOnHand: result.quantityOnHand,
           isActive: result.isActive
         };
-        this.productService.addProduct(productCreateDto).subscribe(() => this.loadProducts());
+        this.productService.addProduct(productCreateDto).subscribe(() => {
+          this.openSanckBar('Product Created Successfully', 'Close');
+          this.loadProducts()
+        });
       }
     });
   }
@@ -71,8 +75,21 @@ export class ProductComponent implements OnInit, OnDestroy {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.productService.updateProduct(result).subscribe(() => this.loadProducts());
+        this.productService.updateProduct(result).subscribe(() => {
+          this.openSanckBar('Product Updated Successfully', 'Close');
+          this.loadProducts()
+        });
       }
+    });
+  }
+
+
+  openSanckBar(message: string, action: string): void {
+    this._snackBar.open(message, action, {
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 3000
+
     });
   }
 

@@ -23,6 +23,7 @@ export class ProductUpdateComponent {
   ) {
 
     this.productForm = this.fb.group({
+      productId: [data.product.productId],
       name: [data.product.name, Validators.required],
       manufacturer: [data.product.manufacturer, Validators.required],
       style: [data.product.style, Validators.required],

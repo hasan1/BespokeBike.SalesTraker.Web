@@ -21,6 +21,7 @@ export class CustomerUpdateComponent {
   ) {
 
     this.customerForm = this.fb.group({
+      customerId: [data.customer.customerId],
       firstName: [data.customer.firstName, Validators.required],
       lastName: [data.customer.lastName, Validators.required],
       address: [data.customer.address, Validators.required],

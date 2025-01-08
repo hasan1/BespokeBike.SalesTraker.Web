@@ -21,6 +21,7 @@ export class SaleUpdateComponent {
   ) {
 
     this.saleForm = this.fb.group({
+      saleId: [data.sale.saleId],
       employeeId: [data.sale.employeeId, Validators.required],
       customerId: [data.sale.customerId, Validators.required],
       salesDate: [data.sale.salesDate, Validators.required],
